@@ -90,11 +90,11 @@ int main(int argc, char *argv[]) {
         return 0;
     }
     cout << "TIFF Batch Processor" << endl;
-    string VRS_MAIN = getenv("MAIN");
-    string gdal_data_dir = VRS_MAIN + "/gdal/share/gdal";
-    string gdalwarp = VRS_MAIN + "/gdal/bin/gdalwarp";
-    string proj_data_dir = VRS_MAIN + "/proj/share/proj";
-    string proj_lib = VRS_MAIN + "/proj/lib";
+    string MAIN = getenv("MAIN");
+    string gdal_data_dir = MAIN + "/gdal/share/gdal";
+    string gdalwarp = MAIN + "/gdal/bin/gdalwarp";
+    string proj_data_dir = MAIN + "/proj/share/proj";
+    string proj_lib = MAIN + "/proj/lib";
 
     setenv("PROJ_LIB", proj_data_dir.c_str(), 1);
     const char* old_ld_path = getenv("LD_LIBRARY_PATH");
